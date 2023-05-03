@@ -1,6 +1,6 @@
 # The Legend of Zelda: Breath of the Wild Compendium React Website
 
-This website displays information about items, monsters, and creatures found in Breath of the Wild.
+This website displays information about items, monsters, and creatures found in Breath of the Wild.\
 Taken from [Hyrule Compendium API by Aarov Borthakur](https://gadhagod.github.io/Hyrule-Compendium-API/#/)
 
 ---
