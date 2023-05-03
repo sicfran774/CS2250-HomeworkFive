@@ -1,38 +1,79 @@
-.App {
+.root {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aa1fb637-d360-4231-8774-25bc11abe589/db40763-1199186f-14be-4c13-999e-21625c32368b.png/v1/fill/w_1024,h_576,q_80,strp/sheikah_slate_wallpaper_by_sarinilli_db40763-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvYWExZmI2MzctZDM2MC00MjMxLTg3NzQtMjViYzExYWJlNTg5XC9kYjQwNzYzLTExOTkxODZmLTE0YmUtNGMxMy05OTllLTIxNjI1YzMyMzY4Yi5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.0EvCziFy6EjtUK38661jocGm1XHy6D-X9pLl0Pq61kM");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.item-flexbox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.item-cell {
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  z-index: 10;
+}
+
+.item-cell:hover .item-cell-info{
+  transform: translateY(-250px)
+  
+}
+
+.item-cell-info{
+  position: absolute;
+  transition: transform 500ms;
+  background-color: #282c34;
+  height: 250px;
+  width: 280px;
+  text-align: center;
+  z-index: 0;
+}
+
+.item-name{
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.item-image{
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item-description{
+  color: white;
+  font-size: 12px;
 }
 
-.App-header {
+.item-found{
+  font-size: 20px;
+}
+
+.header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  margin-top: 0;
+}
+
+.footer {
+  align-items: center;
+  position: absolute;
+  bottom: -260px;
+  left: 0;
+  right: 0;
+  background-color: #282c34;
+  color: white;
+  z-index: 4;
+  height: 260px;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
