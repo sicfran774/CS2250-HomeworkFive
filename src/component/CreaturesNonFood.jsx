@@ -1,12 +1,12 @@
 import React from 'react';
 
-function BOTW(text) {
+function CreaturesNonFood() {
   //useState()    ===   [variable, setter]
   const [items, setItems] = React.useState([]);
   const [isDataLoaded, setIsDataLoaded] = React.useState(false);
 
   React.useEffect(() => {
-    fetch("https://botw-compendium.herokuapp.com/api/v2/all")
+    fetch("https://botw-compendium.herokuapp.com/api/v2/category/creatures")
       .then((res) => res.json())
       .then((json) => {
         setItems(json);
@@ -22,10 +22,7 @@ function BOTW(text) {
     );
   }
     
-  const food = items.data.creatures.food;
-  const nonFood = items.data.creatures.non_food;
-  const monster = items.data.monsters;
-  
+  const food = items.data.non_food;
   
   return (
     <div className="item-flexbox">
@@ -36,6 +33,7 @@ function BOTW(text) {
             <div className="item-cell-info">
               <h2>{item.name}</h2>
               <p className="item-description">{item.description}</p>
+              <p>Drops: {item.drops}</p>
               <p className="item-found">Found in {item.common_locations}</p>
             </div>
             <div className="footer"></div>
@@ -46,4 +44,4 @@ function BOTW(text) {
   );
 };
   
-export default BOTW;
+export default CreaturesNonFood;
