@@ -1,5 +1,4 @@
 import './App.css';
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreaturesNonFood from './component/CreaturesNonFood';
 import CreaturesFood from './component/CreaturesFood';
